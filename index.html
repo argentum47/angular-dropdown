@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Angular DropDown</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css">
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="app/modules/common/dropdown/stylesheets/dropdown.css">
+  <link rel="stylesheet" href="app/modules/common/components/driver_detail.css">
+</head>
+<body>
+  <div class="container" ng-app="driverApp">
+    <div ng-controller="DriversController">
+      <ul class="list-inline selected-values">
+        <li ng-repeat="value in selectedValues track by value.id">{{ [value.license, value.name].join("/") }}</li>
+      </ul>
+      <app-dropdown list="model.drivers" selected="model.driver" cars="model.cars" placeholder='Select a Driver / Pair Veichle' properties="model.properties"></app-dropdown>
+      <app-dropdown list="model.drivers" selected="model.driver" cars="model.cars" placeholder='Select a Driver / Pair Veichle' properties="model.properties"></app-dropdown>
+      <a ng-click=""
+    </div>
+  </div>
+  <script src="vendor/angular.js"></script>
+  <script src="app/init.js"></script>
+  <script src="app/modules/driver/factories/driver.js"></script>
+  <script src="app/modules/driver/controllers/driver.js"></script>
+  <script src="app/modules/common/components/driver.js"></script>
+  <script src="app/modules/common/dropdown/filterDriver.js"></script>
+  <script src="app/modules/common/dropdown/controllers/dropdown.js"></script>
+  <script src="app/modules/common/dropdown/dropdown.js"></script>
+  <script src="app/app.js"></script>
+</body>
+</html>

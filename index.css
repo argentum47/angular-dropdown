@@ -1,0 +1,41 @@
+html, body, ul, li, div, input, span, p {
+  margin: 0;
+  padding: 0;
+}
+
+.pull-left {
+  float: left;
+}
+
+.pull-right {
+  float: right;
+}
+
+.clearfix::after {
+  content: "";
+  display: block;
+  visibility: hidden;
+  height: 0;
+  clear: both;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.list-unstyled {
+  list-style-type: none;
+}
+
+.list-inline {
+  list-style-type: none;
+}
+
+.list-inline li {
+  display: inline-block;
+  padding: 0 10px;
+}
+
+.selected-values {
+  margin: 10px 0;
+}
