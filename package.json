@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node_modules/http-server/bin/http-server -p 3032 -c 5"
+    "start": "node_modules/http-server/bin/http-server -p 3033 -c 5"
   },
   "keywords": [],
   "author": "",

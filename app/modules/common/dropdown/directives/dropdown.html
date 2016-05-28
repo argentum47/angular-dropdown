@@ -1,0 +1,30 @@
+<div class="dropdown-container">
+  <div class="selected-item" ng-click="driverDirective.toggle()" ng-class="{selected: !placeholderVisible}">
+    <span ng-if="!placeholderVisible">{{ ::driverDirective.serializeProps(selected) }}</span>
+    <span class="placeholder" ng-if="placeholderVisible">{{ placeholder }}</span>
+    <i class="selected-item__angle-down fa fa-angle-down"></i>
+  </div>
+  <div class="dropdown-list">
+    <div ng-class="{ show: listVisible }">
+      <input class="search-field"
+            type="text"
+            ng-model="driverDirective.text"
+            ng-change="driverDirective.searchDrivers()"
+            ng-if="listVisible"
+            placeholder="Search"
+            autofocus/>
+      <ul class="dropdown-list__list-items" ng-class="{overflow: list.length > 4}">
+        <li class="dropdown-list__list-item"
+          ng-repeat="driver in renderedList track by driver.id"
+          ng-class="{hover: driverDirective.isHovered(driver.id)}"
+          ng-click="driverDirective.select(driver)"
+          />
+          <app-popover ng-if="driverDirective.isHovered(driver.id)"driver="driver" serialize="driverDirective.serializeProps(user)" car="driverDirective.car"></app-popover>
+          <a ng-mouseover="driverDirective.hover(driver)" ng-mouseout="driverDirective.unset()">
+            {{ ::driverDirective.serializeProps(driver) }}
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

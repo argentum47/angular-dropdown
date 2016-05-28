@@ -1,9 +1,9 @@
 'use strict';
 
 angular.module('driverApp', [
-  'driverApp.filters',
+  'dropDown.filters',
+  'dropDown.components',
+  'dropDown.directives',
   'driverApp.factories',
-  'driverApp.controllers',
-  'driverApp.components',
-  'driverApp.directives'
+  'driverApp.controllers'
 ]);

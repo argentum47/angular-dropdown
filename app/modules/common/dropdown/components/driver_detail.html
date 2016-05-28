@@ -1,0 +1,17 @@
+<div class="details-popover">
+  <div ng-if="$ctrl.car.id" class="car">
+    <h4 class="text-uppercase">Vehicle</h4>
+    <div class="clearfix">
+      <img class="pull-left detail-image" ng-src="{{$ctrl.car.image}}"/>
+      <p class="pull-left detail-text">{{$ctrl.$ctrl.car.id}} {{$ctrl.car.name}}</p>
+    </div>
+  </div>
+
+  <div ng-if="$ctrl.driver.id" class="driver">
+    <h4 class="text-uppercase">Driver</h4>
+    <div class="clearfix">
+      <img class="pull-left detail-image" ng-src="{{$ctrl.driver.image}}"/>
+      <p class="pull-left detail-text">{{$ctrl.driver.phone}} {{$ctrl.serialize({ user: $ctrl.driver })}}</p>
+    </div>
+  </div>
+</div>

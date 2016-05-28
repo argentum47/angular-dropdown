@@ -6,7 +6,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css">
   <link rel="stylesheet" href="index.css">
   <link rel="stylesheet" href="app/modules/common/dropdown/stylesheets/dropdown.css">
-  <link rel="stylesheet" href="app/modules/common/components/driver_detail.css">
+  <link rel="stylesheet" href="app/modules/common/dropdown/components/driver_detail.css">
 </head>
 <body>
   <div class="container" ng-app="driverApp">
@@ -20,13 +20,16 @@
     </div>
   </div>
   <script src="vendor/angular.js"></script>
+  <script src="app/modules/common/dropdown/init.js"></script>
   <script src="app/init.js"></script>
+
   <script src="app/modules/driver/factories/driver.js"></script>
   <script src="app/modules/driver/controllers/driver.js"></script>
-  <script src="app/modules/common/components/driver.js"></script>
-  <script src="app/modules/common/dropdown/filterDriver.js"></script>
+
+  <script src="app/modules/common/dropdown/components/driver.js"></script>
+  <script src="app/modules/common/dropdown/filters/filterDriver.js"></script>
   <script src="app/modules/common/dropdown/controllers/dropdown.js"></script>
-  <script src="app/modules/common/dropdown/dropdown.js"></script>
+  <script src="app/modules/common/dropdown/directives/dropdown.js"></script>
   <script src="app/app.js"></script>
 </body>
 </html>
