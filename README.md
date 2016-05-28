@@ -17,6 +17,13 @@ To use it:
     <script src="app/modules/common/dropdown/controllers/dropdown.js"></script>
     <script src="app/modules/common/dropdown/directives/dropdown.js"></script>
   ```
+- To use it, have a parentController and inside it call the directive
+  the paramters to be passed are
+  ```
+     list: "containing an array of key value pairs, an id and license number is required",
+     selected: "a blank object that would be set by the child directives",
+     properties: "an array or string which are the keys or key of the objects in the list above"
+  ```
 
 To run this project:
 
